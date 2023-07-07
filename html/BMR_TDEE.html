@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/BMR_TDEE.css">
+    <title>InTraining</title>
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link href="https://fonts.cdnfonts.com/css/zcool-qingke-huangyou" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/goldman" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <div class="headerwrap">
+        <div class="logo"><a href="./homepage.html"><img src="/image/Logo.svg"></a></div>
+        <ul class="slider-menu">
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./BMR_TDEE.html">BMR/TDEE</a></li>
+            <li><a href="./Programs.html">Programs</a></li>
+            <li><a href="./equipments.html">Equipments</a></li>
+            <li><a href="./contact_us.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="webcont">
+        <div class="web-lef">
+            <h1 font style="color: white;">基礎代謝率BMR及身體質量指數(BMI) 計算機</h1>
+            <p font style="font-size: 20px;color: white;" id="fon">
+                BMR指人體在休息狀態下，維持新陳代謝所需的熱量，即使整天躺著不動也會消耗的最低熱量。</p>
+            </n>
+            <p font style="font-size: 20px;color: white;" id="fon">
+                以身體質量指數 (Body Mass Index, BMI) 來衡量肥胖程度。(世界衛生組織建議)</p>
+            <img src="/image/cal_1.png">
+        </div>
+        <div class="web-right" font style="color: white;font-size: 20px">
+
+            <form id="sele1" font style="color: white;">
+                <p>生理性別：</p>
+                <label>
+                    <input type="radio" name="myRadio" class="gender" value="male" checked>男性
+                </label>
+                <label>
+                    <input type="radio" name="myRadio" class="gender" value="female">女性
+                </label>
+            </form>
+            <div>年齡：<input type=text class="age" placeholder="請輸入年齡"></div>
+            <div>身高：<input type=number class="height" placeholder="請輸入身高 (公分)"></div>
+            <div>體重：<input type=number class="weight" placeholder="請輸入體重 (公斤)"></div>
+
+            <div font style="color: rgb(0, 0, 0)" id="result1" onclick="egg()" style="height: 100px;">
+                基礎代謝率 (BMR) 計算結果：
+                <br>
+                身體質量指數 (BMI) 計算結果：
+            </div>
+
+        </div>
+    </div>
+    <div class="tdee">
+        <div class="tdeecontent">
+            <h1 font style="color: white;">每日總熱量消耗 (TDEE)</h1>
+            <p font style="font-size: 20px">TDEE 是身體一整天下來，包括基礎代謝、活動量、吃東西所消耗的熱量。不同的生活型態需要的熱量也不一樣，當每天攝取的熱量和 TDEE
+                相等，便達到「熱量平衡」。</p>
+            <p font style="font-size: 20px">減重以均衡飲食為原則，應循序漸進才不易復胖。每週減去約 0.3~0.5 公斤，為適當的減重速度。可從 TDEE -300 大卡開始，視情況調整成
+                -500 大卡。</p>
+            <p font style="font-size: 20px">※ 避免過度節食造成肌肉流失，減重期間熱量不得低於基礎代謝率，建議攝取為 TDEE -300 大卡。</p>
+        </div>
+        <div id="imgtb">
+
+            <div class="seldom">
+                <img src="/image/cal_2.png">
+                <div class="selcon">
+                    <p>幾乎不運動</p>
+                    </n>
+                    <p>BMR*1.2=
+                        <label id="sel"></label>
+                    </p>
+
+                </div>
+            </div>
+            <div class="once">
+                <img src="/image/cal_3.png">
+                <p>每週運動 1-3 天</p>
+                </n>
+                <p>BMR*1.375=
+                    <label id="onc"></label>
+                </p>
+            </div>
+            <div class="three">
+                <img src="/image/cal_4.png">
+                <p>每週運動 3-5 天</p>
+                </n>
+                <p>BMR*1.55=
+                    <label id="thr"></label>
+                </p>
+            </div>
+            <div class="six">
+                <img src="/image/cal_5.png">
+                <p>每週運動 6-7 天</p>
+                </n>
+                <p>BMR*1.72=
+                    <label id="six2"></label>
+                </p>
+            </div>
+            <div class="always">
+                <img src="/image/cal_6.png">
+                <p>長時間運動或體力勞動工作</p>
+                </n>
+                <p>BMR*1.9=
+                    <label id="alw"></label>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <Script>
+        function egg() {
+            // BMI = 體重(公斤) / 身高2(公尺2)
+            // 獲取性別單選radio的值
+            const gender = document.querySelector('input[name="myRadio"]:checked').value;
+
+            // 取出年齡.身高.體重的值
+            const age = document.querySelector('.age').value;
+            const height = document.querySelector('.height').value;
+            const weight = document.querySelector('.weight').value;
+
+            // 判斷輸入框是不是空的
+            if (age === "" || height === "" || weight === "") {
+                alert("請填寫完整！");
+                return;
+            }
+
+            // 計算基礎代謝率
+            let bmr = 0;
+
+            if (gender === "male") {
+                bmr = Math.floor(Math.round((9.99 * weight + 6.25 * height - 4.92 * age + (166 * 1 - 161)) * 100) / 100);
+            } else {
+                bmr = Math.floor(Math.round((9.99 * weight + 6.25 * height - 4.92 * age - 161) * 100) / 100);
+            }
+
+            let bminum = Math.round(((weight / (height * height)) * 10000 / 100) * 100);
+            let bmi = '';
+            switch (true) {
+                case bminum < 18:
+                    bmi = '體重過輕，要均衡飲食，也別忘記運動增加體能！';
+                    break;
+                case bminum >= 18.5 && bminum < 24:
+                    bmi = '健康體重，要繼續保持！';
+                    break;
+                case bminum >= 24 && bminum < 27:
+                    bmi = '體重過重了，要小心囉，趕快「健康體重管理」！';
+                    break;
+                case bminum >= 27 && bminum < 30:
+                    bmi = '輕度肥胖囉，立刻放下手中的垃圾食物！';
+                    break;
+                case bminum >= 30 && bminum < 35:
+                    bmi = '中度肥胖囉，要立即執行「健康體重管理」！';
+                    break;
+                case bminum >= 35:
+                    bmi = '重度肥胖～要執行「健康體重管理」並搭配醫囑！';
+                    break;
+                default:
+                    bmi = 'BMI值有誤';
+                    break;
+            }
+            // 顯示結果
+            const result1 = `基礎代謝率 (BMR) 計算結果：${bmr}`;
+            const result2 = `身體質量指數 (BMI) 計算結果：${bminum} \n ${bmi}`;
+            document.querySelector('#result1').innerText =
+                `${result1} \n ${result2}`;
+
+            //1.2 1.375 1.55 1.72 1.9
+            sel.innerText = Math.floor(Math.round((bmr * 1.2) * 100) / 100);
+            onc.innerText = Math.floor(Math.round((bmr * 1.375) * 100) / 100);
+            thr.innerText = Math.floor(Math.round((bmr * 1.55) * 100) / 100);
+            six2.innerText = Math.floor(Math.round((bmr * 1.72) * 100) / 100);
+            alw.innerText = Math.floor(Math.round((bmr * 1.9) * 100) / 100);
+
+        }
+
+
+
+
+    </Script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+html,
+body {
+    margin: 0px;
+    background-color:#ACACAC;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.headerwrap {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  padding: 0 0;
+	height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-menu {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-top: 30px;
+}
+
+.logo {
+  width: 20%;
+  top: 0;
+}
+
+a, a:visited, a:link {
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: #F60909;
+}
+
+
+
+@import url('https://fonts.cdnfonts.com/css/zcool-qingke-huangyou');
+@import url('https://fonts.cdnfonts.com/css/goldman');
+
+.slider-menu li{ 
+  transition: 0.3s linear all;
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-size: 28px;  
+
+}
+
+.slider-menu > li:hover {
+	
+	/* box-shadow: 0px 3px 3px 21px rgba(128, 128, 128, 0.309); */
+  cursor: pointer; 
+}
+
+.selectbar {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  gap: 10px;
+  position: fixed;
+  width: 1307px;
+  height: 50px;
+  left: calc(50% - 1307px/2 + 3.5px);
+  top: calc(50% - 92px/2 - 290px);
+  background: #FDF9F9;
+  border-radius: 90px;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center; 
+    align-items: center;
+}
+
+.bar * {
+    margin-left: 13px;
+}
+
+.selectbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+   
+}
+
+.selectbar button {
+    font-size: large;
+    font-weight: bolder;
+    width: 130.9px;
+    height: 41.4px;
+    
+
+    border:none;
+    border-radius: 30px;
+    
+}
+
+.selectbar button:hover, .selectbar button:checked{
+    font-size: large;
+    color:  #000000;
+    font-weight: bolder;
+    width: 130.9px;
+    height: 41.4px;
+
+    box-shadow: inset 3px 7px 4px rgba(0, 0, 0, 0.15);
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.workout {
+    position:fixed ;
+    width: 1326px;
+    height: 500px;
+    left: 70px;
+    top: 200px;
+
+    background: #D9D9D9;
+    border-radius: 30px;
+   
+}
+
+.bar img {
+    height: 30px;
+    width: 30px;
+}
+
+.BTn button {
+    font-size: large;
+    font-weight: bolder;
+    
+    color: black;
+    width: 130.9px;
+    height: 41.4px;
+    
+
+    background: white;
+    border-radius: 30px;
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-align: center;
+    box-shadow: inset 3px 7px 4px rgba(0, 0, 0, 0.15);
+    
+}
+  
+  .BTn button:hover,.BTn button:checked {
+    
+    color: #fff;
+    background-color: #333;
+    
+  
+  }
+
+
+
+.container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    margin-top: 45rem;
+    margin-left: 33.75rem;
+  }
+
+  .BTn {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 设置两个按钮之间的间距 */
+    text-align: center;
+    
+  }
+
+  .content {
+    display: none;
+  }
+  
+  .content.show {
+    display: block;
+  }
+  
+  
+  
+  .selectitem button.active {
+    color: #fff;
+    background-color: #333;
+  }
+  /* 其中，data-target属性用于指定对应的下方div元素的id，show类用于控制显示和隐藏。在CSS中，.content的display属性设置为none，表示默认情况下不显示，.content.show的display属性设置为block，表示当添加show类时显示。.selectitem button和.selectitem button.active用于设置按键的样式，.selectitem button.active表示当前被 */
+
+   input[type=checkbox] {
+    display: none;
+   }
+
+  input[type=checkbox]+span {
+    padding-left: 60px;
+    
+    background: url(/image/\ icon\ _check\ with\ circle_.png) no-repeat;
+    user-select: none;
+    }
+
+    input[type=checkbox]:checked+span {
+        background: url(/image/\ icon\ _check\ with\ circle_2.png) no-repeat;
+    }
+
+    .day1_left span{
+        font-size: 57px;
+        text-align: center;
+        font-family: 'ZCOOL QingKe HuangYou';
+        
+    }
+
+    h2{
+    font-family: 'Hiragino Kaku Gothic StdN';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 48px;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .day1_left label {
+        display: block;
+        margin-top: 40px;
+        
+    }
+
+    .day1_left {
+        margin-left: 22px;
+    }
+
+    .day1_middle {
+       display: inline-block;
+       margin-left: 40px;
+    }
+
+    .day1_middle2 {
+        margin-left: 400px;
+        margin-top: -300px; 
+    }
+
+    .day1_middle3 img{
+        display: inline-block;
+        margin-top: 20px;
+        vertical-align: middle;
+       
+        
+    }
+
+    .day1_middle3 {
+        margin-left: 460px;
+        margin-top: -434px;
+    }
+
+    .day1_middle3 p{
+        font-size: 22px;
+        display: inline-block;
+        vertical-align: middle; 
+        margin: 0 0 0 10px; /* 設置文字與圖片之間的距離 */
+        margin-top: 20px;
+    
+    }
+
+    .day1_middle3 label {
+        display: block;
+         
+    }
+
+    .day1_middle4 {
+        margin-left:780px;
+        margin-top: -500px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+    .day1_middle4 th {
+        padding: 53.2px 0px 10px 10px;  
+        /* 上  右  下   左; */
+        text-align: center;
+        text-decoration: underline;
+        font-size: large;
+      }
+
+    .day1_middle4  td {
+        padding: 60px 14px 53.2px 10px;
+        text-align: center;
+      }
+      
+     

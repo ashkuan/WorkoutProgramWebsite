@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/hompage_style.css">
+    <title>InTraining</title>
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link href="https://fonts.cdnfonts.com/css/zcool-qingke-huangyou" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/goldman" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <div class="headerwrap">
+        <div class="logo"><a href="./homepage.html"><img src="/image/Logo.svg"></a></div>
+        <ul class="slider-menu">
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./BMR_TDEE.html">BMR/TDEE</a></li>
+            <li><a href="./Programs.html">Programs</a></li>
+            <li><a href="./equipments.html">Equipments</a></li>
+            <li><a href="./contact_us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <span class="content">Thoughts Become Things</span>
+    </div>
+
+    </div>
+
+    <div class="cenicon">
+        <img src="/image/icon _weight_.png">
+    </div>
+    <button id="show">I'M READY</button>
+    <div>
+
+        <dialog id="infoModal">
+            <section class="section_form">
+                <p class="login">Log in</p>
+                <form id="consultation-form" class="feed-form" action="#">
+                    <input required="" placeholder="Name" type="text">
+                    <input name="phone" required="" placeholder="Phone number">
+                    <input name="email" required="" placeholder="E-mail" type="email">
+
+                    <button id="button_submit">註冊</button>
+                    <button id="button_submit">登入</button>
+                </form>
+
+            </section>
+
+
+        </dialog>
+    </div>
+    <script>
+        let btn = document.querySelector("#show");
+        let infoModal = document.querySelector("#infoModal");
+        let close = document.querySelector("#button_submit");
+        btn.addEventListener("click", function () {
+            infoModal.showModal();
+        })
+        close.addEventListener("click", function () {
+            infoModal.close();
+        })
+    </script>
+</body>
+
+</html>

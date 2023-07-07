@@ -1,0 +1,140 @@
+html,
+body {
+  margin: 0px;
+  background-color:#ACACAC;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.container{
+  display: column;
+}
+
+.headerwrap {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  /* padding: 0 0; */
+	height: 100px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ACACAC;
+}
+
+.slider-menu {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-top: 30px;
+}
+
+.logo {
+  width: 20%;
+  top: 0;
+}
+
+a, a:visited, a:link {
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: #F60909;
+}
+
+
+
+@import url('https://fonts.cdnfonts.com/css/zcool-qingke-huangyou');
+@import url('https://fonts.cdnfonts.com/css/goldman');
+
+
+
+.slider-menu li{ 
+  transition: 0.3s linear all;
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-size: 28px;  
+
+}
+
+.slider-menu > li:hover {
+	
+  cursor: pointer; 
+}
+
+.web-lef {
+ 
+  float: left;
+  width: 50%;
+  
+}
+
+
+p{
+  color: white;
+  
+}
+
+.web-right {
+  width: 50%;
+  float: right;
+  margin-top: 23px;
+  margin-left: 200px;
+ 
+
+}
+
+.web-right > *{
+  margin-top: 23px;
+}
+.web-lef,.web-right{
+  flex:1;
+}
+
+.webcont {
+  display: flex;
+  width: 100%;
+  margin-top: 120px;
+  
+  
+  height: 680px;
+}
+
+
+#imgtb {
+  display: flex;
+  justify-content: space-between; /* 將圖片間距均勻分布 */
+  text-align: center;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#imgtb img {
+  display: block; /* 讓圖片成為區塊元素，以便使用 width 和 height 調整大小 */
+  width: 120px; /* 設定圖片寬度 */
+  height: 120px; /* 設定圖片高度 */
+}
+
+.tdee{
+  display: block;
+  width: 100%;
+  margin-top: 120px;
+  height: 680px;
+  
+}
+
+.tdeecontent {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.always img {
+  margin-left: 50px;
+}
+

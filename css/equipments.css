@@ -1,0 +1,106 @@
+html,
+body {
+  margin: 0px;
+  background-color:#ACACAC;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-left: 10px;
+  margin-left: 10px;
+ 
+}
+
+.container{
+  display: column;
+}
+
+.headerwrap {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  /* padding: 0 0; */
+	height: 100px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ACACAC;
+}
+
+.slider-menu {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-top: 30px;
+}
+
+.logo {
+  width: 20%;
+  top: 0;
+}
+
+a, a:visited, a:link {
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: #F60909;
+}
+
+
+
+@import url('https://fonts.cdnfonts.com/css/zcool-qingke-huangyou');
+@import url('https://fonts.cdnfonts.com/css/goldman');
+
+
+
+.slider-menu li{ 
+  transition: 0.3s linear all;
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-size: 28px;  
+
+}
+
+.slider-menu > li:hover {
+	
+  cursor: pointer; 
+}
+
+.s_img{
+    width: 250px;
+    height: 300px;
+    position: relative;
+    margin-left: 60px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.s_img img{
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    transition: 2s;
+    perspective: 1000px;
+}
+
+.s_img:hover #a1{
+    transform: rotateY(-180deg);
+}
+
+.s_img:hover #a2{
+    transform: rotateY(0deg);
+}
+
+#a1 {
+    transform: rotateY(180deg);
+}
+
+.ss {
+    margin-top: 200px;
+    display: flex;
+    justify-items: center;
+}

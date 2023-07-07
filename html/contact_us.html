@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/contact_us.css">
+    <title>InTraining</title>
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link href="https://fonts.cdnfonts.com/css/zcool-qingke-huangyou" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/goldman" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="headerwrap">
+        <div class="logo"><a href="./homepage.html"><img src="/image/Logo.svg"></a></div>
+        <ul class="slider-menu">
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./BMR_TDEE.html">BMR/TDEE</a></li>
+            <li><a href="./Programs.html">Programs</a></li>
+            <li><a href="./equipments.html">Equipments</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="con">
+        <div class="f1">
+
+            <label for="fname">姓名:</label>
+            <input type="text" id="fname" name="firstname">
+            <br>
+            <label for="lname">Email:</label>
+            <input type="text" id="lname" name="lastname">
+            <br>
+            <label for="country">居住城市:
+
+            </label>
+            <select id="country" name="country">
+                <option value="Taichung">台中</option>
+                <option value="Taipei">台北</option>
+                <option value="Tainan">台南</option>
+                <option value="Xinchu">新竹</option>
+                <option value="Kaoshion">高雄</option>
+                <option value="Pintung">屏東</option>
+            </select>
+            <br>
+
+            <label for="lname">主旨: </label>
+            <input type="text" id="lname" name="lastname">
+            <br>
+
+
+            <label for="subject">建議及回饋 :
+            </label>
+            <br>
+            <textarea id="subject" name="subject" style="height:200px"></textarea>
+            <br>
+            <input type="submit" value="Submit" onclick="apple()">
+
+        </div>
+    </div>
+    <Script>
+        function apple() {
+            let fname = document.querySelector('#fname').value;
+            alert(`謝謝${fname},真摯的感謝您提供的寶貴意見`)
+
+        }
+    </Script>
+
+
+    </div>
+</body>
+
+</html>

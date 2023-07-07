@@ -1,0 +1,124 @@
+html,
+body {
+  margin: 0px;
+  background-color: rgba(244,244,244,20%);
+  overflow: hidden;
+  background-image: url(/image/image2.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@import url('https://fonts.cdnfonts.com/css/zcool-qingke-huangyou');
+@import url('https://fonts.cdnfonts.com/css/goldman');
+
+.headerwrap {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    /* padding: 0 0; */
+      height: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .slider-menu {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-top: 30px;
+  }
+  
+  .logo {
+    width: 20%;
+    top: 0;
+  }
+
+  a, a:visited, a:link {
+    text-decoration: none;
+    outline: none;
+    color: white;
+  }
+  
+  a:hover, a:active {
+    text-decoration: none;
+    color: #F60909;
+  }
+  
+  .slider-menu li{ 
+    transition: 0.3s linear all;
+    font-family: 'ZCOOL QingKe HuangYou';
+    font-size: 28px;  
+  
+  }
+  
+  .slider-menu > li:hover {
+      
+      /* box-shadow: 0px 3px 3px 21px rgba(128, 128, 128, 0.309); */
+      cursor: pointer; 
+  }
+
+  #fade {
+    display:none;
+    position:absolute;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+    z-index:1001;
+    -moz-opacity:0.8;
+    opacity:.80;
+    filter:alpha(opacity=80);
+
+
+  }
+  #light{
+    display:none;
+    position:absolute;
+    top:25%;
+    left:10%;
+    width:80%;
+    height:60%;
+    padding:16px;
+    
+    z-index:1002;
+    overflow:auto;
+    
+    
+
+    background: rgba(68, 68, 68, 0.15);
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12.5px);
+  }
+
+  #about {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 33px;
+    /* or  */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.25em;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    white-space:pre-wrap;
+    float:left;
+    
+  }
+
+  #closebt{
+
+    font-size: xx-large;
+    font: bolder;
+    filter: drop-shadow(10px 4px 4px rgba(0, 0, 0, 0.25));
+    
+  }
+
+  .x1 {
+   text-align: end;
+  }
